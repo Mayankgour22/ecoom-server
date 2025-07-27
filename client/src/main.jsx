@@ -5,9 +5,9 @@ import App from './App.jsx'
 import "./css/deep.css"
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Provider } from 'react-redux';
-import store from './Store.jsx';
+import Store from './Store.jsx';
 createRoot(document.getElementById("root")).render(
-  <Provider store={store}>
+  <Provider store={Store}>
     <App />
   </Provider>
 );
