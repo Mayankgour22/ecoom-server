@@ -49,14 +49,14 @@ const adminlogin= async(req , res)=>{
  const { email, password} =req.body
  
   try {
-    const Admin = await AdminModel.findOne({ adminid: email });
+    const Admin = await AdminModel.findOne({adminid:email})
     if(!Admin){
         res.status(401).send({msg:"Invalid email!!!!"})
     }
     if(Admin.Password!= password){
         res.status(401).send({ msg: "Invalid Password!!!!" });
     }
-    res.status(200).send( {msg:"Login Success!!!" , Admin:Admin})
+     res.status(200).send( {msg:"Login Success!!!", Admin:Admin})
   } catch (error) {
     console.log(error)
   }
