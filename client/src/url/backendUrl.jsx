@@ -1,2 +1,2 @@
-const url = "http://localhost:6005";
+const url = "https://ecoom-server.onrender.com";
 export default url;

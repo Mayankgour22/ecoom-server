@@ -53,7 +53,7 @@ const Checkout=()=>{
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_signature: response.razorpay_signature
           };
-  await axios.post("http://localhost:6005/api/payment/verify", response);
+  await axios.post(`${url}/api/payment/verify`, response);
 },
         theme: {
           color: "#3399cc",
@@ -64,7 +64,7 @@ const Checkout=()=>{
     };
     const handlePay = async () => {
       try {
-        const orderURL = "http://localhost:6005/api/payment/orders";
+        const orderURL = `${url}/api/payment/orders`;
         const { data } = await axios.post(orderURL, {
           amount: totalPrice ,
           products: productName,
