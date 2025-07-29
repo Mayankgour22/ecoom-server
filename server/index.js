@@ -19,11 +19,10 @@ const OAuth2Strategy= require("passport-google-oauth2").Strategy;
 const userDB= require("./models/googleModel");
 
 const client_id ="1002227653971-qs4oq8q13mhbq6a4m7f8dibsdf7jorqu.apps.googleusercontent.com";
-const clientsecret="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";
-
+const clientsecret="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"
 
 app.use(cors({ 
-    origin:"http://localhost:5173",
+    origin:["http://localhost:5173", "https://ecoom-server.vercel.app"],
     methods:"GET, POST, PUT, DELETE",
     credentials:true
 }));
